@@ -14,13 +14,13 @@ are few major contributing factors for a successful restaurant.
 
 ### 1.2 Problem
 Consider the following hypothetical scenario :
-‘Resto-grand’ a successful multi-chained restaurant company has its brands around Europe,
+‘**'Resto-grand'**’ a successful multi-chained restaurant company has its brands around Europe,
 India, California. They wanted to start their restaurants in New York state and required some
 suggestions on where to open them.
 The aim of the project is to find suitable locations for the restaurants in New York state.
 
 ### 1.3 Audience
-Here Resto-grand’s business owners to whom we are preparing the report is the target
+Here **'Resto-grand'**’s business owners to whom we are preparing the report is the target
 audience. But this report can be used by other business people who want to find a suitable
 location to open a restaurant in New York state.
 
@@ -106,7 +106,7 @@ Cluster 6 contains the cities where pizza places and bakeries are priority in th
 venues.
 
 ## 5. Discussions and recommendations
-Based on what we have learned about the clusters, we can advise the Resto-grand’s business
+Based on what we have learned about the clusters, we can advise the **'Resto-grand'**’s business
 owners to consider the cities from Cluster-2 as the most suitable location for their restaurants.
 These are the cities that are well represented by the restaurants, other bar and pizza places.
 This shows there is very high demand in the locality for the restaurant and in turn can be
