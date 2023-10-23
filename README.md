@@ -14,7 +14,7 @@ are few major contributing factors for a successful restaurant.
 
 ### 1.2 Problem
 Consider the following hypothetical scenario :
-‘**'Resto-grand'**’ a successful multi-chained restaurant company has its brands around Europe,
+**Resto-grand** a successful multi-chained restaurant company has its brands around Europe,
 India, California. They wanted to start their restaurants in New York state and required some
 suggestions on where to open them.
 The aim of the project is to find suitable locations for the restaurants in New York state.
