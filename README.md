@@ -52,9 +52,7 @@ of each city of New York.
 ## 3. Methodology
 The first step is to collect data about cities of New York state from the wikipedia page at the
 following link ( https://en.wikipedia.org/wiki/List_of_cities_in_New_York ). There are 62 cities in New
-York state which are shown by the blue circle in the map.  
-![alt text](./images/cities.png)  
-
+York state.  
 
 ### 3.1 Data cleaning and exploration
 Then we tidy up the data to contain city, county, population columns. We will use this data to find the
@@ -64,7 +62,11 @@ follows -
 ![alt text](./images/data_desc.png)  
 
 Using folium, a map rendering software we shall just see the location of cities on the world map.
-The blue points represent our 62 cities in New York state.
+The blue points represent our 62 cities in New York state.  
+
+![alt text](./images/cities.png)  
+
+
 Later we use foursquare’s api to find the list of venues around a city (‘Amsterdam’) to see where we
 get necessary venues in that city. We will restrict the limit of venues obtained to 100 and which are
 present around 30 km radius of the city. Once we receive the response in json format, we will tidy it
