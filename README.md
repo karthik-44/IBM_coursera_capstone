@@ -44,46 +44,62 @@ The below output is obtained after cleaning the data acquired from wikipedia’s
 python’s geopy package. Each row represents a city in New York state, its county, population
 and geographical coordinates.  
 
-![some text](./images/data_desc.png)
+![alt text](./images/data_desc.png)  
+
 We will use foursquare’s API to find the most common venues present around the 30 km radius
 of each city of New York.
 
 ## 3. Methodology
 The first step is to collect data about cities of New York state from the wikipedia page at the
 following link ( https://en.wikipedia.org/wiki/List_of_cities_in_New_York ). There are 62 cities in New
-York state.
+York state which are shown by the blue circle in the map.  
+![alt text](./images/cities.png)  
+
 
 ### 3.1 Data cleaning and exploration
 Then we tidy up the data to contain city, county, population columns. We will use this data to find the
 geographical coordinates of each city using python’s geopy package and the top 5 rows of data is as
-follows -
+follows -  
+
+![alt text](./images/data_desc.png)  
+
 Using folium, a map rendering software we shall just see the location of cities on the world map.
 The blue points represent our 62 cities in New York state.
 Later we use foursquare’s api to find the list of venues around a city (‘Amsterdam’) to see where we
 get necessary venues in that city. We will restrict the limit of venues obtained to 100 and which are
 present around 30 km radius of the city. Once we receive the response in json format, we will tidy it
 up and represent it in a dataset having venue’s name, its category and its geographical coordinates.
-The top 5 rows of the dataset is shown below -
-As we can see, we got 100 venues with 44 unique categories in Amsterdam. It contains restaurants
-as well.
-We generalize this and find the venues around 30km in each city of New York state and create a
-dataframe which consists of venue's name,category,geographical location along with to which city it
-belongs and city’s geographical location. The top 5 rows are shown below :
+
+
+
+We generalize and find the venues around 30km in each city of New York state and create a
+dataframe which consists of venue's name, category, geographical location of the venue and neighborhood.
+For example, we can see the following:  
+
+![alt text](./images/foursquare_albany.png)  
+
+
 Later we use the one-hot encoding technique on the 'Venue Category' column to find the unique
 venues present in the city / neighborhood and then calculate the frequencies of venues present
 in each city. Finally we obtain a dataset each row containing the city name and the top 10 most
-common venues in that city. A portion of it can be seen below -
+common venues in that city. A portion of it can be seen below -  
 
+![alt text](./images/neighborhood_10_top_venues.png)  
+
+  
 ### 3.2 Machine Learning method
 As we have data available for our machine learning model we shall proceed this step by using
 an unsupervised algorithm as we don’t have any labelled data. We use the KMeans Clustering
 algorithm that arranges the similar cities into a cluster and dissimilar cities in different clusters.
 For this algorithm we need to pass a parameter called number of clusters. The optimal value of
-this can be found by using the KElbowVisualizer module in the yellowbrick package.
+this can be found by using the KElbowVisualizer module in the yellowbrick package.  
+
+![alt text](./images/distortion_score.png) 
+
+
 From the above graph, we can see the value of k = 7. So, we will input this value as the number
 of clusters into KMeans algorithm and fit the dataset containing the top 10 most common
-venues in each city. When done, we add the cluster labels to the dataset. The first 5 rows of the
-table are shown below -
+venues in each city. When done, we add the cluster labels to the dataset. 
 
 ## 4. Results
 We shall merge the above dataset with the dataset which has the city's geographical details. We
@@ -115,7 +131,10 @@ owners to consider the cities from Cluster-2 as the most suitable location for t
 These are the cities that are well represented by the restaurants, other bar and pizza places.
 This shows there is very high demand in the locality for the restaurant and in turn can be
 successful provided proper ambience and taste of the food. All the blue colored circles
-represent this cluster.
+represent this cluster.  
+
+![alt text](./images/clustered_neighborhoods.png)  
+
 
 ## 6. Conclusion
 In this project we discussed the process of solving a hypothetical real world scenario of finding
