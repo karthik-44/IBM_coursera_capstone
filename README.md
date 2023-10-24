@@ -26,21 +26,25 @@ location to open a restaurant in New York state.
 
 ## 2. Data
 To tackle the above mentioned problem, we need to have the dataset that contains :
-● Cities present in New York State.
-● Latitude and Longitude locations of the cities of New York state.
-● Top venues present in each city of New York state.
+- Cities present in New York State.
+- Latitude and Longitude locations of the cities of New York state.
+- Top venues present in each city of New York state.
 
 ### 2.1 Data Sources
-● List of cities present in New York state can be obtained from wikipedia’s page :
+- List of cities present in New York state can be obtained from wikipedia’s page :
 ( https://en.wikipedia.org/wiki/List_of_cities_in_New_York )
-● Latitude and Longitude locations of them can be found using python's geopy package.
-● We will use foursquare.com’s API to find the most common venues present at given
+- Latitude and Longitude locations of them can be found using python's geopy package.
+- We will use foursquare.com’s API to find the most common venues present at given
 geographical coordinates.
+- Remove unnecessary columns in the dataset and ensure the dataset has
+data about city, county, population, latitude and longitude columns.
 
 ### 2.2 Description of data
 The below output is obtained after cleaning the data acquired from wikipedia’s page and using
 python’s geopy package. Each row represents a city in New York state, its county, population
-and geographical coordinates.
+and geographical coordinates.  
+
+![some text](./images/data_desc.png)
 We will use foursquare’s API to find the most common venues present around the 30 km radius
 of each city of New York.
 
